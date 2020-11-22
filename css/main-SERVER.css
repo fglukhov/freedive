@@ -1890,8 +1890,9 @@ footer a:hover {
   max-width: 360px; }
 
 .footer-soclinks {
-  position: relative;
-  white-space: nowrap; }
+  position: relative; 
+  white-space: nowrap;
+}
 
 .footer-soclinks:before {
   content: "";
@@ -2280,9 +2281,6 @@ table.room-info td.name {
 .service-tmb-info {
   margin: 42px 0 0 0; }
 
-.service-tmb-info .row {
-  align-items: flex-end; }
-
 .service-info-col {
   flex: 0 0 50%;
   max-width: 50%;
@@ -2463,13 +2461,6 @@ table.service-info-table td.name {
 .groups-list .col {
   flex: 0 0 33.3333%;
   max-width: 33.3333%; }
-
-.groups-list .col-wide {
-  flex: 0 0 66.6666%;
-  max-width: 66.6666%; }
-
-.groups-list-text {
-  min-height: 100%; }
 
 .group-tmb {
   text-align: center; }
@@ -3493,13 +3484,6 @@ ol.why-list .h3 {
   line-height: 37px;
   margin: 0 0 33px 0; }
 
-.poll-form h4,
-.poll-form .h4 {
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 37px;
-  margin: 0 0 10px 0; }
-
 .poll-form h3 span,
 .poll-form .h3 span {
   color: #EC5F65; }
@@ -3669,9 +3653,10 @@ ul.poll-dots > li:last-child:after {
     transform: scale(1.15); } }
 
 .insta-gallery {
-  max-width: 969px;
-  margin: 0 auto;
-  padding-top: 60px; }
+    max-width: 969px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
 
 .insta-gallery .slick-arrow {
   top: auto;
@@ -3687,7 +3672,9 @@ ul.poll-dots > li:last-child:after {
 
 .insta-gallery .slick-next:before {
   background-image: url(../images/slick-next-green.svg) !important; }
-
+  
 @media (max-width: 767px) {
-  .insta-gallery {
-    padding-top: 0; } }
+    .insta-gallery {
+        padding-top: 0;
+    }
+}

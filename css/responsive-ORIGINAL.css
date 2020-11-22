@@ -340,9 +340,6 @@
   .poll-form h3, .poll-form .h3 {
     font-size: 26px;
     line-height: 32px; }
-  .poll-form h4, .poll-form .h4 {
-    font-size: 26px;
-    line-height: 32px; }
   .quiz-pic {
     margin: 0;
     min-height: 100%;
@@ -878,10 +875,6 @@
     font-size: 22px;
     line-height: 30px;
     margin: 0 0 20px 0; }
-  .poll-form h4, .poll-form .h4 {
-    font-size: 22px;
-    line-height: 30px;
-    margin: 0 0 10px 0; }
   .section-island .section-descr-r {
     padding-top: 40px; }
   .num-list-wrapper-alt {
@@ -967,6 +960,4 @@
   .why-squids {
     display: none; }
   .sticky-block {
-    margin: 0 !important; }
-  .groups-list {
-    margin-bottom: 0px; } }
+    margin: 0 !important; } }

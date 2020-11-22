@@ -225,7 +225,7 @@
                                         <div class="cont">срок</div>
                                       </div>
                                       <div class="service-info-item-val">
-                                        <p>7 дней</p>
+                                        <p>7 дней (2 ночи)</p>
                                       </div>
                                     </div>
                                   </div>
@@ -357,11 +357,11 @@
                                   </div>
                                   <div class="form-radio">
                                     <input id="poll_1_2" type="radio" name="poll_1">
-                                    <label for="poll_1_2">Могу проплыть 100 метров</label>
+                                    <label for="poll_1_2">Да, могу проплыть 100 метров</label>
                                   </div>
                                   <div class="form-radio">
                                     <input id="poll_1_3" type="radio" name="poll_1">
-                                    <label for="poll_1_3">Да, хорошо плаваю</label>
+                                    <label for="poll_1_3">Плаваю хорошо</label>
                                   </div>
                                 </div>
                                 <div class="poll-form-nav">
@@ -373,19 +373,23 @@
                           <div class="poll-form-step">
                             <div class="poll-step-content">
                               <div class="poll-step-content-inner">
-                                <div class="h3"><span>02 /</span> Чекбоксы</div>
+                                <div class="h3"><span>02 /</span> Занимались ли вы когда-нибудь снорклингом?</div>
                                 <div class="form-radios">
                                   <div class="form-radio">
-                                    <input id="poll_2_1" type="checkbox" name="poll_2_1">
-                                    <label for="poll_2_1">Ответ 1</label>
+                                    <input id="poll_2_1" type="radio" name="poll_2" checked>
+                                    <label for="poll_2_1">Нет</label>
                                   </div>
                                   <div class="form-radio">
-                                    <input id="poll_2_2" type="checkbox" name="poll_2_2">
-                                    <label for="poll_2_2">Ответ 2</label>
+                                    <input id="poll_2_2" type="radio" name="poll_2">
+                                    <label for="poll_2_2">Однажды</label>
                                   </div>
                                   <div class="form-radio">
-                                    <input id="poll_2_3" type="checkbox" name="poll_2_3">
-                                    <label for="poll_2_3">Ответ 3</label>
+                                    <input id="poll_2_3" type="radio" name="poll_2">
+                                    <label for="poll_2_3">Много раз</label>
+                                  </div>
+                                  <div class="form-radio">
+                                    <input id="poll_2_4" type="radio" name="poll_2">
+                                    <label for="poll_2_4">Это мое любимое занятие</label>
                                   </div>
                                 </div>
                                 <div class="poll-form-nav">
@@ -395,59 +399,22 @@
                               </div>
                             </div>
                           </div>
-                          <div class="poll-form-step">
+                          <div class="poll-form-step" data-parent="poll_2_1">
                             <div class="poll-step-content">
                               <div class="poll-step-content-inner">
-                                <div class="h3"><span>03 /</span> Обязательные чекбоксы</div>
-                                <div class="form-radios form-checkboxes-required">
-                                  <div class="form-radio">
-                                    <input id="poll_3_1" type="checkbox" name="poll_3_1">
-                                    <label for="poll_3_1">Ответ 1</label>
-                                  </div>
-                                  <div class="form-radio">
-                                    <input id="poll_3_2" type="checkbox" name="poll_3_2">
-                                    <label for="poll_3_2">Ответ 2</label>
-                                  </div>
-                                  <div class="form-radio">
-                                    <input id="poll_3_3" type="checkbox" name="poll_3_3">
-                                    <label for="poll_3_3">Ответ 3</label>
-                                  </div>
-                                </div>
-                                <div class="poll-form-nav">
-                                  <div class="btn btn-back"></div>
-                                  <div class="btn btn-3 btn-forward"><span>Далее</span></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="poll-form-step">
-                            <div class="poll-step-content">
-                              <div class="poll-step-content-inner">
-                                <div class="h3"><span>04 /</span> Радиокнопки с альтернативным вариантом</div>
+                                <div class="h3"><span>03 /</span> Занимались ли активными видами спорта?</div>
                                 <div class="form-radios">
                                   <div class="form-radio">
-                                    <input id="poll_4_1" type="radio" name="poll_4" checked>
-                                    <label for="poll_4_1">1</label>
+                                    <input id="poll_3_1_1" type="radio" name="poll_3_1" checked>
+                                    <label for="poll_3_1_1">Нет</label>
                                   </div>
                                   <div class="form-radio">
-                                    <input id="poll_4_2" type="radio" name="poll_4">
-                                    <label for="poll_4_2">2</label>
+                                    <input id="poll_3_1_2" type="radio" name="poll_3_1">
+                                    <label for="poll_3_1_2">Иногда</label>
                                   </div>
                                   <div class="form-radio">
-                                    <input id="poll_4_3" type="radio" name="poll_4">
-                                    <label for="poll_4_3">3</label>
-                                  </div>
-                                  <div class="form-radio-text">
-                                    <div class="form-radio">
-                                      <input id="poll_4_4" type="radio" name="poll_4" value="other">
-                                      <label for="poll_4_4">Другое</label>
-                                    </div>
-                                    <div class="form-text form-group-other">
-                                      <div class="form-group">
-                                        <label class="placeholder" for="poll_4_4_text">Введите значение</label>
-                                        <input type="text" name="poll_4_4_text" id="poll_4_4_text">
-                                      </div>
-                                    </div>
+                                    <input id="poll_3_1_3" type="radio" name="poll_3_1">
+                                    <label for="poll_3_1_3">Регулярно</label>
                                   </div>
                                 </div>
                                 <div class="poll-form-nav">
@@ -457,34 +424,26 @@
                               </div>
                             </div>
                           </div>
-                          <div class="poll-form-step">
+                          <div class="poll-form-step" data-parent="poll_2_2,poll_2_3,poll_2_4">
                             <div class="poll-step-content">
                               <div class="poll-step-content-inner">
-                                <div class="h3"><span>05 /</span> Чекбоксы с альтернативным вариантом</div>
+                                <div class="h3"><span>03 /</span> Во время снорклинга вы ныряли?</div>
                                 <div class="form-radios">
                                   <div class="form-radio">
-                                    <input id="poll_5_1" type="checkbox" name="poll_5_1" checked>
-                                    <label for="poll_5_1">1</label>
+                                    <input id="poll_3_2_1" type="radio" name="poll_3_2" checked>
+                                    <label for="poll_3_2_1">Нет</label>
                                   </div>
                                   <div class="form-radio">
-                                    <input id="poll_5_2" type="checkbox" name="poll_5_2">
-                                    <label for="poll_5_2">2</label>
+                                    <input id="poll_3_2_2" type="radio" name="poll_3_2">
+                                    <label for="poll_3_2_2">Да, на 1-2 метра</label>
                                   </div>
                                   <div class="form-radio">
-                                    <input id="poll_5_3" type="checkbox" name="poll_5_3">
-                                    <label for="poll_5_3">3</label>
+                                    <input id="poll_3_2_3" type="radio" name="poll_3_2">
+                                    <label for="poll_3_2_3">Да, на 3-5 метров</label>
                                   </div>
-                                  <div class="form-radio-text">
-                                    <div class="form-radio">
-                                      <input id="poll_5_4" type="checkbox" name="poll_5_4" value="other">
-                                      <label for="poll_5_4">Другое</label>
-                                    </div>
-                                    <div class="form-text form-group-other">
-                                      <div class="form-group">
-                                        <label class="placeholder" for="poll_5_4_text">Введите значение</label>
-                                        <input type="text" name="poll_5_4_text" id="poll_5_4_text">
-                                      </div>
-                                    </div>
+                                  <div class="form-radio">
+                                    <input id="poll_3_2_4" type="radio" name="poll_3_2">
+                                    <label for="poll_3_2_4">Да, больше 5 метров</label>
                                   </div>
                                 </div>
                                 <div class="poll-form-nav">
@@ -494,44 +453,271 @@
                               </div>
                             </div>
                           </div>
-                          <div class="poll-form-step">
+                          <div class="poll-form-step" data-parent="poll_3_1_1">
                             <div class="poll-step-content">
                               <div class="poll-step-content-inner">
-                                <div class="h3"><span>06 /</span> Текстовое поле</div>
+                                <div class="h3"><span>04 /</span> Занимаетесь ли вы йогой?</div>
+                                <div class="form-radios">
+                                  <div class="form-radio">
+                                    <input id="poll_4_1_1" type="radio" name="poll_4_1" checked>
+                                    <label for="poll_4_1_1">Да</label>
+                                  </div>
+                                  <div class="form-radio">
+                                    <input id="poll_4_1_2" type="radio" name="poll_4_1">
+                                    <label for="poll_4_1_2">Нет</label>
+                                  </div>
+                                </div>
+                                <div class="poll-form-nav">
+                                  <div class="btn btn-back"></div>
+                                  <div class="btn btn-3 btn-forward"><span>Далее</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="poll-form-step" data-parent="poll_3_1_2,poll_3_1_3,poll_3_2_1,poll_3_2_2,poll_3_2_3,poll_3_2_4">
+                            <div class="poll-step-content">
+                              <div class="poll-step-content-inner">
+                                <div class="h3"><span>04 /</span> Занимаетесь ли вы водными видами спорта?</div>
+                                <div class="form-radios">
+                                  <div class="form-radio">
+                                    <input id="poll_4_2_1" type="radio" name="poll_4_2" checked>
+                                    <label for="poll_4_2_1">Нет</label>
+                                  </div>
+                                  <div class="form-radio">
+                                    <input id="poll_4_2_2" type="radio" name="poll_4_2">
+                                    <label for="poll_4_2_2">Другие виды</label>
+                                  </div>
+                                  <div class="form-radio">
+                                    <input id="poll_4_2_3" type="radio" name="poll_4_2">
+                                    <label for="poll_4_2_3">Серфинг</label>
+                                  </div>
+                                  <div class="form-radio">
+                                    <input id="poll_4_2_4" type="radio" name="poll_4_2">
+                                    <label for="poll_4_2_4">Каякинг</label>
+                                  </div>
+                                  <div class="form-radio">
+                                    <input id="poll_4_2_5" type="radio" name="poll_4_2">
+                                    <label for="poll_4_2_5">Фридайвинг</label>
+                                  </div>
+                                </div>
+                                <div class="poll-form-nav">
+                                  <div class="btn btn-back"></div>
+                                  <div class="btn btn-3 btn-forward"><span>Далее</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="poll-form-step" data-parent="poll_4_1_1,poll_4_1_2">
+                            <div class="poll-step-content">
+                              <div class="poll-step-content-inner">
+                                <div class="h3"><span>05 /</span> Любите ли вы отдыхать на море?</div>
+                                <div class="form-radios">
+                                  <div class="form-radio">
+                                    <input id="poll_5_1_1" type="radio" name="poll_5_1" checked>
+                                    <label for="poll_5_1_1">Да</label>
+                                  </div>
+                                  <div class="form-radio">
+                                    <input id="poll_5_1_2" type="radio" name="poll_5_1">
+                                    <label for="poll_5_1_2">Нет</label>
+                                  </div>
+                                </div>
+                                <div class="poll-form-nav">
+                                  <div class="btn btn-back"></div>
+                                  <div class="btn btn-3 btn-forward"><span>Далее</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="poll-form-step" data-parent="poll_4_2_1,poll_4_2_2,poll_4_2_3,poll_4_2_4">
+                            <div class="poll-step-content">
+                              <div class="poll-step-content-inner">
+                                <div class="h3"><span>05 /</span> Занимаетесь ли вы йогой?</div>
+                                <div class="form-radios">
+                                  <div class="form-radio">
+                                    <input id="poll_5_2_1" type="radio" name="poll_5_2" checked>
+                                    <label for="poll_5_2_1">Да</label>
+                                  </div>
+                                  <div class="form-radio">
+                                    <input id="poll_5_2_2" type="radio" name="poll_5_2">
+                                    <label for="poll_5_2_2">Нет</label>
+                                  </div>
+                                </div>
+                                <div class="poll-form-nav">
+                                  <div class="btn btn-back"></div>
+                                  <div class="btn btn-3 btn-forward"><span>Далее</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="poll-form-step" data-parent="poll_4_2_5">
+                            <div class="poll-step-content">
+                              <div class="poll-step-content-inner">
+                                <div class="h3"><span>05 /</span> Есть ли у вас сертификат по фридайвингу?</div>
+                                <div class="form-radios">
+                                  <div class="form-radio">
+                                    <input id="poll_5_3_1" type="radio" name="poll_5_3" checked>
+                                    <label for="poll_5_3_1">SSI Try/Basic/Pool Freediving / AIDA */**Pool / RAID Basic Freediver</label>
+                                  </div>
+                                  <div class="form-radio">
+                                    <input id="poll_5_3_2" type="radio" name="poll_5_3">
+                                    <label for="poll_5_3_2">SSI Freediving Level 1/ AIDA ** / RAID Freediver / Molchanovs W1</label>
+                                  </div>
+                                  <div class="form-radio">
+                                    <input id="poll_5_3_3" type="radio" name="poll_5_3">
+                                    <label for="poll_5_3_3">SSI Freediving Level 2/ AIDA *** / RAID Advanced / Molchanovs W2</label>
+                                  </div>
+                                  <div class="form-radio">
+                                    <input id="poll_5_3_4" type="radio" name="poll_5_3">
+                                    <label for="poll_5_3_4">SSI Freediving Level 3/ AIDA **** / RAID Master / Molchanovs W3/4/5</label>
+                                  </div>
+                                </div>
+                                <div class="poll-form-nav">
+                                  <div class="btn btn-back"></div>
+                                  <div class="btn btn-3 btn-forward"><span>Далее</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="poll-form-step last" data-parent="poll_5_1_1,poll_5_1_2">
+                            <div class="poll-step-content">
+                              <div class="poll-step-content-inner">
+                                <div class="h3"><span>06 /</span> Вам подходит</div>
+                                <div class="h4"> Try freediving</div>
                                 <div class="form-group">
-                                  <label class="placeholder" for="poll_6">Введите значение</label>
-                                  <input id="poll_6" type="text" name="poll_6" required>
+                                  <label class="placeholder" for="poll_6_1_name">Имя</label>
+                                  <input id="poll_6_1_name" type="text" name="poll_6_1_name" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_1_email">E-mail</label>
+                                  <input id="poll_6_1_email" type="email" name="poll_6_1_email" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_1_phone">Телефон</label>
+                                  <input class="input-phone" id="poll_6_1_phone" type="text" name="poll_6_1_phone" required>
                                 </div>
                                 <div class="poll-form-nav">
                                   <div class="btn btn-back"></div>
-                                  <div class="btn btn-3 btn-forward"><span>Далее</span></div>
+                                  <button class="btn btn-3" type="submit"><span>Отправить</span></button>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="poll-form-step last">
+                          <div class="poll-form-step last" data-parent="poll_4_2_1,poll_4_2_2,poll_5_3_1">
                             <div class="poll-step-content">
                               <div class="poll-step-content-inner">
-                                <div class="h3"><span>07 /</span> Введите ваши данные</div>
-                                <div class="row">
-                                  <div class="col-12 col-lg-6">
-                                    <div class="form-group">
-                                      <label class="placeholder" for="poll_name">Ваше имя</label>
-                                      <input id="poll_name" type="text" name="poll_name" required>
-                                    </div>
-                                  </div>
-                                  <div class="col-12 col-lg-6">
-                                    <div class="form-group">
-                                      <label class="placeholder" for="poll_email">E-mail</label>
-                                      <input id="poll_email" type="email" name="poll_email" required>
-                                    </div>
-                                  </div>
-                                  <div class="col-12">
-                                    <div class="poll-form-nav">
-                                      <div class="btn btn-back"></div>
-                                      <button class="btn btn-3" type="submit"><span>Далее</span></button>
-                                    </div>
-                                  </div>
+                                <div class="h3"><span>06 /</span> Вам подходит</div>
+                                <div class="h4">SSI freediving level 1</div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_2_name">Имя</label>
+                                  <input id="poll_6_2_name" type="text" name="poll_6_2_name" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_2_email">E-mail</label>
+                                  <input id="poll_6_2_email" type="email" name="poll_6_2_email" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_2_phone">Телефон</label>
+                                  <input class="input-phone" id="poll_6_2_phone" type="text" name="poll_6_2_phone" required>
+                                </div>
+                                <div class="poll-form-nav">
+                                  <div class="btn btn-back"></div>
+                                  <button class="btn btn-3" type="submit"><span>Отправить</span></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="poll-form-step last" data-parent="poll_4_2_3">
+                            <div class="poll-step-content">
+                              <div class="poll-step-content-inner">
+                                <div class="h3"><span>06 /</span> Вам подходит</div>
+                                <div class="h4">Фридайвинг для серферов</div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_3_name">Имя</label>
+                                  <input id="poll_6_3_name" type="text" name="poll_6_3_name" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_3_email">E-mail</label>
+                                  <input id="poll_6_3_email" type="email" name="poll_6_3_email" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_3_phone">Телефон</label>
+                                  <input class="input-phone" id="poll_6_3_phone" type="text" name="poll_6_3_phone" required>
+                                </div>
+                                <div class="poll-form-nav">
+                                  <div class="btn btn-back"></div>
+                                  <button class="btn btn-3" type="submit"><span>Отправить</span></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="poll-form-step last" data-parent="poll_4_2_4">
+                            <div class="poll-step-content">
+                              <div class="poll-step-content-inner">
+                                <div class="h3"><span>06 /</span> Вам подходит</div>
+                                <div class="h4">Фридайвинг для каякеров</div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_4_name">Имя</label>
+                                  <input id="poll_6_4_name" type="text" name="poll_6_4_name" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_4_email">E-mail</label>
+                                  <input id="poll_6_4_email" type="email" name="poll_6_4_email" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_4_phone">Телефон</label>
+                                  <input class="input-phone" id="poll_6_4_phone" type="text" name="poll_6_4_phone" required>
+                                </div>
+                                <div class="poll-form-nav">
+                                  <div class="btn btn-back"></div>
+                                  <button class="btn btn-3" type="submit"><span>Отправить</span></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="poll-form-step last" data-parent="poll_5_3_2">
+                            <div class="poll-step-content">
+                              <div class="poll-step-content-inner">
+                                <div class="h3"><span>06 /</span> Вам подходит</div>
+                                <div class="h4">SSI freediving level 2</div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_5_name">Имя</label>
+                                  <input id="poll_6_5_name" type="text" name="poll_6_5_name" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_5_email">E-mail</label>
+                                  <input id="poll_6_5_email" type="email" name="poll_6_5_email" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_5_phone">Телефон</label>
+                                  <input class="input-phone" id="poll_6_5_phone" type="text" name="poll_6_5_phone" required>
+                                </div>
+                                <div class="poll-form-nav">
+                                  <div class="btn btn-back"></div>
+                                  <button class="btn btn-3" type="submit"><span>Отправить</span></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="poll-form-step last" data-parent="poll_5_3_3,poll_5_3_4">
+                            <div class="poll-step-content">
+                              <div class="poll-step-content-inner">
+                                <div class="h3"><span>06 /</span> Вам подходит</div>
+                                <div class="h4">Коуч-сессии</div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_6_name">Имя</label>
+                                  <input id="poll_6_6_name" type="text" name="poll_6_6_name" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_6_email">E-mail</label>
+                                  <input id="poll_6_6_email" type="email" name="poll_6_6_email" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="placeholder" for="poll_6_6_phone">Телефон</label>
+                                  <input class="input-phone" id="poll_6_6_phone" type="text" name="poll_6_6_phone" required>
+                                </div>
+                                <div class="poll-form-nav">
+                                  <div class="btn btn-back"></div>
+                                  <button class="btn btn-3" type="submit"><span>Отправить</span></button>
                                 </div>
                               </div>
                             </div>

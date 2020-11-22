@@ -56,16 +56,6 @@ $(document).ready(function() {
 
 	});
 
-	$(".btn-to-course").click(function () {
-
-		$("html, body").animate({
-
-			scrollTop: $(".page-body .section#section-order").offset().top
-
-		}, 1000);
-
-	});
-
 	// Forward button END
 
 	// Poll
@@ -110,7 +100,7 @@ $(document).ready(function() {
 		slidesToShow: 2,
 		slidesToScroll: 2,
 		speed: 1000,
-		//infinite: false,
+		infinite: false,
 		rows: 0
 	});
 
@@ -122,7 +112,7 @@ $(document).ready(function() {
 		slidesToShow: 3,
 		slidesToScroll: 3,
 		speed: 1000,
-		//infinite: true,
+		infinite: false,
 		rows: 0,
 		responsive: [
 			{
@@ -142,9 +132,9 @@ $(document).ready(function() {
 
 	$(".services-slider").slick({
 		slidesToShow: 3,
-		slidesToScroll: 1,
+		slidesToScroll: 3,
 		speed: 1000,
-		//infinite: false,
+		infinite: false,
 		rows: 0,
 		responsive: [
 			{
@@ -172,7 +162,7 @@ $(document).ready(function() {
 		slidesToShow: 2,
 		slidesToScroll: 2,
 		speed: 1000,
-		//infinite: false,
+		infinite: false,
 		rows: 0,
 		responsive: [
 			{
@@ -193,7 +183,7 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		speed: 1000,
-		//infinite: false,
+		infinite: false,
 		rows: 0,
 		fade: true
 	});
@@ -206,7 +196,7 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		speed: 500,
-		//infinite: false,
+		infinite: false,
 		rows: 0
 	});
 
@@ -218,7 +208,7 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		speed: 500,
-		//infinite: false,
+		infinite: false,
 		rows: 0
 	});
 
@@ -244,7 +234,7 @@ $(document).ready(function() {
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			speed: 500,
-			//infinite: false,
+			infinite: false,
 			rows: 0
 		});
 
@@ -271,6 +261,39 @@ $(document).ready(function() {
 	});
 
 	// Cast filter END
+
+	// Show more link
+
+	$("body").on("click", ".show-more", function () {
+
+		var curLink = $(this),
+			curUrl = $(this).attr("href"),
+			curTarget = $($(this).closest(".show-more-wrapper").parent());
+
+		curLink.addClass("loading");
+
+		$.ajax({
+			url: curUrl,
+			dataType: "html"
+		}).done(function(data) {
+
+			curTarget.append($(data)).removeClass("loading");
+
+			curLink.closest(".show-more-wrapper").remove();;
+
+			if ($(data).find("[data-dates]").length) {
+
+				castFilter(curTarget.closest(".cast-over-wrapper"));
+
+			}
+
+		});
+
+		return false;
+
+	});
+
+	// Show more link END
 
 	childSelects();
 
@@ -491,7 +514,84 @@ $(document).ready(function() {
 	// Contacts map
 
 
-	
+	ymaps.ready(function () {
+
+		if ($("#contactsMap").length) {
+
+			var myMap = new ymaps.Map('contactsMap', {
+					center: [13.386478, 120.750977],
+					zoom: 10,
+					controls: ['zoomControl']
+				}, {}),
+
+				myPlacemark = new ymaps.Placemark([13.386478, 120.750977], {
+					hintContent: '',
+					balloonContent: ''
+				}, {
+					// Опции.
+					// Необходимо указать данный тип макета.
+					iconLayout: 'default#image',
+					// Своё изображение иконки метки.
+					iconImageHref: 'images/map-pin.svg',
+					// Размеры метки.
+					iconImageSize: [34, 50],
+					// Смещение левого верхнего угла иконки относительно
+					// её "ножки" (точки привязки).
+					iconImageOffset: [-17, -50]
+				});
+
+			myMap.behaviors.disable('scrollZoom');
+
+			myMap.geoObjects
+				.add(myPlacemark);
+
+			setTimeout(function () {
+				myMap.container.fitToViewport()
+			}, 100);
+
+		}
+
+		if ($("#contactsMapModal").length) {
+
+			var myMap2 = new ymaps.Map('contactsMapModal', {
+					center: [13.386478, 120.750977],
+					zoom: 10,
+					controls: ['zoomControl']
+				}, {}),
+
+				myPlacemark2 = new ymaps.Placemark([13.386478, 120.750977], {
+					hintContent: '',
+					balloonContent: ''
+				}, {
+					// Опции.
+					// Необходимо указать данный тип макета.
+					iconLayout: 'default#image',
+					// Своё изображение иконки метки.
+					iconImageHref: 'images/map-pin.svg',
+					// Размеры метки.
+					iconImageSize: [34, 50],
+					// Смещение левого верхнего угла иконки относительно
+					// её "ножки" (точки привязки).
+					iconImageOffset: [-17, -50]
+				});
+
+			myMap2.behaviors.disable('scrollZoom');
+
+			myMap2.geoObjects
+				.add(myPlacemark2);
+
+
+		}
+
+		$("#mapModal").on("shown.bs.modal", function () {
+
+			setTimeout(function () {
+				myMap2.container.fitToViewport()
+			}, 100);
+
+		});
+
+	});
 
 	// Contacts map END
 
@@ -522,7 +622,34 @@ $(document).ready(function() {
 		backFocus: false
 	});
 
-	$(".up-link").click(function() {
+	// Show more
+
+	$("body").on("click", ".more-link", function () {
+	    var moreLink = $(this),
+	        moreUrl = $(this).attr("href");
+	    if (!moreLink.hasClass("loading")) {
+	        moreLink.addClass("loading");
+	        $.ajax({
+	            url: moreUrl,
+	            dataType: "html"
+	        }).done(function(data) {
+	            moreLink.closest(".more-link-wrapper").before($(data));
+	            moreLink.closest(".more-link-wrapper").remove();
+
+	            if ($(".more-link").closest(".projects-list").length) {
+
+								$(".more-link").closest(".projects-list").find(".project-tmb").css("opacity", "1");
+
+							}
+
+	        });
+	    }
+	    return false;
+	});
+
+	// Show more END
+
+	$(".up-link, .header-logo").click(function() {
 		$("html, body").animate({
 			scrollTop: 0
 		}, 1000);
@@ -1324,8 +1451,6 @@ function quiz() {
 
 		}
 
-		setActiveSteps();
-
 
 	});
 
@@ -1381,61 +1506,61 @@ function quiz() {
 
 	});
 
-	// $("#pollForm").submit(function() {
-	// 	if ($(this).valid()) {
-	// 		var form = $(this);
-	//
-	// 		var quizResult = '';
-	//
-	// 		$(".poll-form-step.active").not(".last").each(function () {
-	//
-	// 			var stepTitle = "<h4>" + $(this).find(".h3").html() + "</h4>";
-	//
-	// 			var stepValue = '';
-	//
-	// 			$(this).find("input[type=checkbox], input[type=radio]").each(function () {
-	//
-	// 				if ($(this).is(":checked")) {
-	//
-	// 					stepValue += '<div>' + $(this).next("label").html() + '</div>';
-	//
-	// 					if ($(this).closest(".form-radio-text").length) {
-	// 						stepValue += '<div>' + $(this).closest(".form-radio-text").find("input[type=text]").val() + '</div>';
-	// 					}
-	//
-	// 				}
-	//
-	// 			});
-	//
-	// 			if (!$(this).find("input[type=checkbox], input[type=radio]").length) {
-	//
-	// 				stepValue += '<div>' + $(this).find("input[type=text]").val() + '</div>';
-	//
-	// 			}
-	//
-	// 			quizResult += stepTitle + stepValue;
-	//
-	// 		});
-	//
-	// 		console.log(quizResult);
-	//
-	// 		$.ajax({
-	// 			type: "POST",
-	// 			url: baseUrl + "quiz.php",
-	// 			data: {
-	// 				subject: "Яуза - результат квиза",
-	// 				name: $("#poll_name").val(),
-	// 				phone: $("#poll_phone").val(),
-	// 				quizresult: quizResult
-	// 			}
-	// 		}).done(function() {
-	//
-	// 			formSuccess(form);
-	//
-	// 		});
-	// 		return false;
-	// 	}
-	// });
+	$("#pollForm").submit(function() {
+		if ($(this).valid()) {
+			var form = $(this);
+
+			var quizResult = '';
+
+			$(".poll-form-step.active").not(".last").each(function () {
+
+				var stepTitle = "<h4>" + $(this).find(".h3").html() + "</h4>";
+
+				var stepValue = '';
+
+				$(this).find("input[type=checkbox], input[type=radio]").each(function () {
+
+					if ($(this).is(":checked")) {
+
+						stepValue += '<div>' + $(this).next("label").html() + '</div>';
+
+						if ($(this).closest(".form-radio-text").length) {
+							stepValue += '<div>' + $(this).closest(".form-radio-text").find("input[type=text]").val() + '</div>';
+						}
+
+					}
+
+				});
+
+				if (!$(this).find("input[type=checkbox], input[type=radio]").length) {
+
+					stepValue += '<div>' + $(this).find("input[type=text]").val() + '</div>';
+
+				}
+
+				quizResult += stepTitle + stepValue;
+
+			});
+
+			console.log(quizResult);
+
+			$.ajax({
+				type: "POST",
+				url: baseUrl + "quiz.php",
+				data: {
+					subject: "Яуза - результат квиза",
+					name: $("#poll_name").val(),
+					phone: $("#poll_phone").val(),
+					quizresult: quizResult
+				}
+			}).done(function() {
+
+				formSuccess(form);
+
+			});
+			return false;
+		}
+	});
 
 }
 
@@ -1455,30 +1580,12 @@ function quizDots() {
 
 function setActiveSteps() {
 
-	console.log('set active')
-
 	$(".poll-form-step").each(function () {
+
 
 		var quizStep = $(this);
 
-		if (quizStep.data("parent")) {
-
-			var parentArr = quizStep.data("parent").split(","),
-					parentChecked = false;
-
-			for (i = 0; i < parentArr.length; i++) {
-
-				if ($(".poll-form-step.active #" + parentArr[i]).is(":checked")) {
-
-					parentChecked = true;
-
-				}
-
-			}
-
-		}
-
-		if (!quizStep.data("parent") || parentChecked) {
+		if (!quizStep.data("parent") || $("#" + quizStep.data("parent")).is(":checked")) {
 
 			quizStep.addClass("active");
 

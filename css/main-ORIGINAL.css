@@ -1209,7 +1209,7 @@ ul.navbar-nav {
 
 ul.navbar-nav > li {
   margin: 0 0 2px 0;
-  padding: 0 10px;
+  padding: 0 18px;
   transition: all .3s ease; }
 
 ul.navbar-nav > li:before {
@@ -1637,52 +1637,6 @@ ul.breadcrumb a:hover {
   transition: opacity .15s ease;
   opacity: 0; }
 
-.review-link-vk:before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: url(../images/review-link-vk.png) 0 0 no-repeat;
-  background-size: 24px auto;
-  transition: opacity .15s ease; }
-
-.review-link-vk:after {
-  content: "";
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: url(../images/review-link-vk.png) 0 -24px no-repeat;
-  background-size: 24px auto;
-  transition: opacity .15s ease;
-  opacity: 0; }
-
-.review-link-insta:before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: url(../images/review-link-insta.png) 0 0 no-repeat;
-  background-size: 24px auto;
-  transition: opacity .15s ease; }
-
-.review-link-insta:after {
-  content: "";
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: url(../images/review-link-insta.png) 0 -24px no-repeat;
-  background-size: 24px auto;
-  transition: opacity .15s ease;
-  opacity: 0; }
-
 .review-link:hover:before {
   opacity: 0; }
 
@@ -1890,8 +1844,7 @@ footer a:hover {
   max-width: 360px; }
 
 .footer-soclinks {
-  position: relative;
-  white-space: nowrap; }
+  position: relative; }
 
 .footer-soclinks:before {
   content: "";
@@ -1916,7 +1869,7 @@ footer a:hover {
 .footer-soclinks a.soclink {
   width: 24px;
   height: 24px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center; }
 
@@ -2280,9 +2233,6 @@ table.room-info td.name {
 .service-tmb-info {
   margin: 42px 0 0 0; }
 
-.service-tmb-info .row {
-  align-items: flex-end; }
-
 .service-info-col {
   flex: 0 0 50%;
   max-width: 50%;
@@ -2463,13 +2413,6 @@ table.service-info-table td.name {
 .groups-list .col {
   flex: 0 0 33.3333%;
   max-width: 33.3333%; }
-
-.groups-list .col-wide {
-  flex: 0 0 66.6666%;
-  max-width: 66.6666%; }
-
-.groups-list-text {
-  min-height: 100%; }
 
 .group-tmb {
   text-align: center; }
@@ -3493,13 +3436,6 @@ ol.why-list .h3 {
   line-height: 37px;
   margin: 0 0 33px 0; }
 
-.poll-form h4,
-.poll-form .h4 {
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 37px;
-  margin: 0 0 10px 0; }
-
 .poll-form h3 span,
 .poll-form .h3 span {
   color: #EC5F65; }
@@ -3667,27 +3603,3 @@ ul.poll-dots > li:last-child:after {
     transition: all 2s ease; }
   .about-gallery .slide:hover .about-gallery-pic {
     transform: scale(1.15); } }
-
-.insta-gallery {
-  max-width: 969px;
-  margin: 0 auto;
-  padding-top: 60px; }
-
-.insta-gallery .slick-arrow {
-  top: auto;
-  margin-top: 0;
-  bottom: 100%;
-  margin-bottom: 39px; }
-
-.insta-gallery .slick-prev {
-  margin-right: 150px; }
-
-.insta-gallery .slick-prev:before {
-  background-image: url(../images/slick-prev-green.svg) !important; }
-
-.insta-gallery .slick-next:before {
-  background-image: url(../images/slick-next-green.svg) !important; }
-
-@media (max-width: 767px) {
-  .insta-gallery {
-    padding-top: 0; } }
